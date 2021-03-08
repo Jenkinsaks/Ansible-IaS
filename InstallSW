@@ -1,0 +1,11 @@
+root@ansiblec:~# cat build-webservers.yml
+---
+- become: yes
+  become_method: sudo
+  hosts: webservers
+  tasks:
+          - name: Run tomcat script
+             shell: ./tomcat.sh
+
+          - name: Run postgress script
+            shell: ./Postgresql-Install1.sh
