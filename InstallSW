@@ -1,17 +1,16 @@
-root@ansiblec:~# cat build-webservers.yml
 ---
 - become: yes
   become_method: sudo
-  hosts: webservers
+  hosts: localhost
   tasks:
           - name: Run Docker script
-             shell: ./dockerubuntu.sh
+            shell: bash dockerubuntu.sh
 
           - name: Run Jenkins script
-            shell: ./jenkinsubuntu.sh
+            shell: bash jenkinsubuntu.sh
           
-          - name: Run tomcat script
-            shell: ./tomcat.sh
+          #- name: Run tomcat script
+          #  shell: bash tomcat.sh
 
-          - name: Run postgress script
-            shell: ./Postgresql-Install1.sh
+          #- name: Run postgress script
+          #  shell: bash Postgresql-Install1.sh
