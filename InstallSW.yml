@@ -20,3 +20,12 @@
 
           - name: Run docker script
             shell: /home/azureuser/dockerubuntu.sh
+            
+          - name: Download Sonar installation script
+            get_url:
+              url: https://raw.githubusercontent.com/Jenkinsaks/Ansible-IaS/main/sonar.sh
+              dest: /home/azureuser/sonar.sh
+              mode: 0755
+
+          - name: Run jenkins script
+            shell: /home/azureuser/sonar.sh
