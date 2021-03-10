@@ -16,7 +16,7 @@
               mode: 0755
 
           - name: Run tomcat script
-             shell: /home/azureuser/tomcat.sh
+            shell: /home/azureuser/tomcat.sh
 
           - name: Run postgress script
             shell: /home/azureuser/Postgresql-Install1.sh
