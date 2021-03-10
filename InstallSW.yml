@@ -27,5 +27,5 @@
               dest: /home/azureuser/sonar.sh
               mode: 0755
 
-          - name: Run jenkins script
+          - name: Run sonar installation script
             shell: /home/azureuser/sonar.sh
