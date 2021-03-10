@@ -5,13 +5,13 @@
   tasks:
           - name: Download tomcat installation script
             get_url:
-              url:  https://raw.githubusercontent.com/devopsbc01/Scripts/master/tomcat.sh
+              url:  https://raw.githubusercontent.com/Jenkinsaks/Ansible-IaS/main/tomcat.sh
               dest: /home/azureuser/tomcat.sh
               mode: 0755
 
           - name: Download postgres installation script
             get_url:
-              url: https://raw.githubusercontent.com/devopsbc01/Scripts/master/Postgresql-Install-1.sh
+              url: https://raw.githubusercontent.com/Jenkinsaks/Ansible-IaS/main/Postgresql-Install-1.sh
               dest: /home/azureuser/Postgresql-Install1.sh
               mode: 0755
 
