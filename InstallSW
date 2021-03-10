@@ -3,14 +3,20 @@
   become_method: sudo
   hosts: localhost
   tasks:
-          - name: Run Docker script
-            shell: bash dockerubuntu.sh
+          - name: Download jenkins installation script
+            get_url:
+              url:  https://raw.githubusercontent.com/Jenkinsaks/Ansible-IaS/main/jenkinsubuntu.sh
+              dest: /home/azureuser/jenkinsubuntu.sh
+              mode: 0755
 
-          - name: Run Jenkins script
-            shell: bash jenkinsubuntu.sh
-          
-          #- name: Run tomcat script
-          #  shell: bash tomcat.sh
+          - name: Download docker installation script
+            get_url:
+              url: https://raw.githubusercontent.com/Jenkinsaks/Ansible-IaS/main/dockerubuntu.sh
+              dest: /home/azureuser/dockerubuntu.sh
+              mode: 0755
 
-          #- name: Run postgress script
-          #  shell: bash Postgresql-Install1.sh
+          - name: Run jenkins script
+            shell: /home/azureuser/jenkinsubuntu.sh
+
+          - name: Run docker script
+            shell: /home/azureuser/dockerubuntu.sh
