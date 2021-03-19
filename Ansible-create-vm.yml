@@ -54,7 +54,7 @@
       ssh_password_enabled: false
       ssh_public_keys:
         - path: /home/azureuser/.ssh/authorized_keys
-          key_data: <your-key-data>
+          key_data: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNpPGPPb4TrIYtUESG1Fert8ipczFjehY9SGuOAUAqNSQNtvMk5r5F8nZXU3pd4WQE17ripb2Vsny4COj3P95mgvX3C7clYNEQkuBnPbRrhPOZ8wTZOlJDYCDYWx3qNdcwZVAvMYqVlmUPn1HQKowTosZPkda9tSebeu+eCrO7mJRAfJOEZt8SR2Np+Xu5YoD3bFp+JJdxIKkqZpK7muUiISajlBmVoRteQHiy6KA4byqLzFPgBB/FowREYVUjZk4EaxMUeQJb2ZsZBWrIxjVsIpj1j/rQJUMqWGwHOn6X6KLik6NDACvcr0lKQUGDcQBsKyk8i1clhZmhVA9AYqcz devops@cc-2ecc14ad-6c769b899f-mc2cl
       network_interfaces: myNIC
       image:
         offer: UbuntuServer
